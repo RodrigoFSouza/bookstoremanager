@@ -2,3 +2,19 @@ spring:
   profiles:
     active: dev
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "loggers"
+  endpoint:
+    shutdown:
+      enabled: true
+
+info:
+  app:
+    name: "Book Store Manager"
+    groupId: "com.desenvolvimento"
+    artifactId: "bookstoremanager"
+    version: "0.0.1-SNAPSHOT"
