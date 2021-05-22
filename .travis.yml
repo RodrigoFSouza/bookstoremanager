@@ -1,8 +1,12 @@
 dist: xenial
 language: java
-sudo: false
-jdk: openjdk16
+sudo: true
+jdk:
+  - openjdk16
+  - openjdk14
 install: true
 cache:
   directories:
     - $HOME/.m2
+before_install:
+  - chmod +x mvnw
