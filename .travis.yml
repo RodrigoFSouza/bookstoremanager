@@ -3,7 +3,6 @@ language: java
 sudo: true
 jdk:
   - openjdk16
-  - openjdk14
 install: true
 cache:
   directories:
