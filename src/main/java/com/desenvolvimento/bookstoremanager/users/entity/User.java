@@ -1,6 +1,7 @@
 package com.desenvolvimento.bookstoremanager.users.entity;
 
 import com.desenvolvimento.bookstoremanager.books.entity.Book;
+import com.desenvolvimento.bookstoremanager.entity.Auditable;
 import com.desenvolvimento.bookstoremanager.users.enums.Gender;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
+public class User extends Auditable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
