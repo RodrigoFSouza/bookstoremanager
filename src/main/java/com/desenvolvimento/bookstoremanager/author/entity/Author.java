@@ -1,6 +1,7 @@
 package com.desenvolvimento.bookstoremanager.author.entity;
 
 import com.desenvolvimento.bookstoremanager.books.entity.Book;
+import com.desenvolvimento.bookstoremanager.entity.Auditable;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "author")
-public class Author implements Serializable {
+public class Author extends Auditable implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
